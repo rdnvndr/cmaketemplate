@@ -1,5 +1,23 @@
 include(../../../../main.cmake)
 
+set(APPPATH "${BINARY_DIR}/bin")
+set(INCPATH "${BINARY_DIR}/include/${PROJECT_NAME}")
+set(DOCPATH "${BINARY_DIR}/share/doc/${PROJECT_NAME}")
+
+if (UNIX)
+    set(RLIBRARYPATH     "${BINARY_DIR}/lib/${PROJECT_NAME}")
+    set(RLIBRARYTESTPATH "${BINARY_DIR}/../../lib/${PROJECT_NAME}")
+endif (UNIX)
+
+if (WIN32)
+    set(RLIBRARYPATH     "${BINARY_DIR}")
+    set(RLIBRARYTESTPATH "${BINARY_DIR}")
+endif (WIN32)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${APPPATH})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${RLIBRARYPATH})
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${RLIBRARYPATH})
+
 add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
 
 target_include_directories(${PROJECT_NAME}
