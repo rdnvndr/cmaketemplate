@@ -5,10 +5,10 @@ add_definitions(-DAPP_NAME="""${PROJECT_NAME}"""
                 -DAPP_COMPANY="""${COMPANY}"""
                 -DAPP_COPYRIGHT="""${COPYRIGHT}""")
 
-set(APPLICATIONPATH "bin")
-set(INCLUDEPATH     "include/app_example/")
-set(DOCPATH         "share/doc/app_example")
-set(RPLUGINPATH     "../lib/app_example/plugins/")
+file(GLOB HEADERS   "*.h")
+file(GLOB SOURCES   "*.cpp")
+file(GLOB FORMS     "*.ui")
+file(GLOB RESOURCES "*.qrc")
 
 if (UNIX)
     set(RLIBRARYPATH     "../lib/app_example")

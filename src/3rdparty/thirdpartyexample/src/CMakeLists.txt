@@ -6,18 +6,13 @@ set(DESCRIPTION "Third Party")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-file(GLOB HEADERS   "*.h")
-file(GLOB SOURCES   "*.cpp")
-file(GLOB FORMS     "*.ui")
-file(GLOB RESOURCES "*.qrc")
+include(../../3rdparty.cmake)
 
-add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
 target_compile_definitions(${PROJECT_NAME} PRIVATE -DTHIRDPARTYEXAMPLE_LIBRARY)
 
 find_package(Qt5Core)
 target_link_libraries(${PROJECT_NAME} Qt5::Core)
 
-include(../../3rdparty.cmake)
 
 
 

@@ -6,18 +6,14 @@ set(DESCRIPTION "Shared library")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-file(GLOB HEADERS   "*.h")
-file(GLOB SOURCES   "*.cpp")
-file(GLOB FORMS     "*.ui")
-file(GLOB RESOURCES "*.qrc")
+include(../libs.cmake)
 
-add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
 target_compile_definitions(${PROJECT_NAME} PRIVATE -DLIB_SHARED_LIBRARY)
 
 find_package(Qt5Core)
 target_link_libraries(${PROJECT_NAME} Qt5::Core)
 
-include(../libs.cmake)
+
 
 
 

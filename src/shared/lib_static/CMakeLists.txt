@@ -6,13 +6,6 @@ set(DESCRIPTION "Static library")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-file(GLOB HEADERS   "*.h")
-file(GLOB SOURCES   "*.cpp")
-file(GLOB FORMS     "*.ui")
-file(GLOB RESOURCES "*.qrc")
-
-add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
-
 include(../shared.cmake)
 
 

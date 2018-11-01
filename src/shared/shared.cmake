@@ -1,4 +1,7 @@
+include(../../../main.cmake)
+
+add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
+
 target_include_directories(${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/include
 )
-include(../../../main.cmake)
