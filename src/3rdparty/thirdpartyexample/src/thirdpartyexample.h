@@ -1,7 +1,9 @@
 #ifndef THIRDPARTYEXAMPLE_H
 #define THIRDPARTYEXAMPLE_H
 
-class ThirdPartyExample
+#include "thirdpartyexampleglobal.h"
+
+class THIRDPARTYEXAMPLELIB ThirdPartyExample
 {
 public:
     void print();

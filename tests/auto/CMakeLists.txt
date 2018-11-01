@@ -1,3 +1,3 @@
 project(subprojects)
 
-add_subdirectory(tst_auto_example)
+# add_subdirectory(tst_auto_example)

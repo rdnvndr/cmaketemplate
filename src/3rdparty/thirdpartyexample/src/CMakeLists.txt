@@ -12,6 +12,10 @@ file(GLOB FORMS     "*.ui")
 file(GLOB RESOURCES "*.qrc")
 
 add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
+target_compile_definitions(${PROJECT_NAME} PRIVATE -DTHIRDPARTYEXAMPLE_LIBRARY)
+
+find_package(Qt5Core)
+target_link_libraries(${PROJECT_NAME} Qt5::Core)
 
 include(../../3rdparty.cmake)
 
