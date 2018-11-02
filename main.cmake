@@ -22,6 +22,6 @@ if (UNIX)
 endif (UNIX)
 
 if (WIN32)
-    set(RLIBRARYPATH     "")
-    set(RLIBRARYTESTPATH "")
+    set(RLIBRARYPATH     "./")
+    set(RLIBRARYTESTPATH "./")
 endif (WIN32)

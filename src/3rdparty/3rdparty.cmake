@@ -9,8 +9,8 @@ if (UNIX)
 endif (UNIX)
 
 if (WIN32)
-    set(RLIBRARYPATH     "")
-    set(RLIBRARYTESTPATH "")
+    set(RLIBRARYPATH     "./")
+    set(RLIBRARYTESTPATH "./")
 endif (WIN32)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BINARY_DIR}/${APPPATH}")
