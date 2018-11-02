@@ -1,3 +1,5 @@
+set(ROOT_PROJECT "app_example")
+
 add_definitions(-DAPP_NAME="""${PROJECT_NAME}"""
                 -DAPP_PRODUCT="""${PRODUCTNAME}"""
                 -DAPP_VERSION="""${PROJECT_VERSION}"""
@@ -12,16 +14,18 @@ file(GLOB RESOURCES "*.qrc")
 
 set(BINARY_DIR "${CMAKE_BINARY_DIR}")
 set(APPPATH "bin")
-set(INCPATH "include/app_example")
-set(DOCPATH "share/doc/app_example")
-set(RPLUGINPATH "lib/app_example/plugins")
+set(INCPATH "include/${ROOT_PROJECT}")
+set(DOCPATH "share/doc/${ROOT_PROJECT}")
+set(RPLUGINPATH "lib/${ROOT_PROJECT}/plugins")
 
 if (UNIX)
-    set(RLIBRARYPATH     "lib/app_example")
-    set(RLIBRARYTESTPATH "lib/app_example")
+    set(RLIBRARYPATH     "lib/${ROOT_PROJECT}")
+    set(RLIBRARYTESTPATH "lib/${ROOT_PROJECT}")
 endif (UNIX)
 
 if (WIN32)
     set(RLIBRARYPATH     "./")
     set(RLIBRARYTESTPATH "./")
 endif (WIN32)
+
+include("${CMAKE_SOURCE_DIR}/cmake/git.cmake")
