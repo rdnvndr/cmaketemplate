@@ -16,9 +16,10 @@ file(GLOB RESOURCES "*.qrc")
 
 # Пути к бинарным файлам
 set(BINARY_DIR "${CMAKE_BINARY_DIR}")
-set(APPPATH "bin")
-set(INCPATH "include/${ROOT_PROJECT}")
-set(DOCPATH "share/doc/${ROOT_PROJECT}")
+set(APPPATH  "bin")
+set(INCPATH  "include/${ROOT_PROJECT}")
+set(DOCPATH  "share/doc/${ROOT_PROJECT}")
+set(TESTPATH "bin")
 set(RPLUGINPATH "lib/${ROOT_PROJECT}/plugins")
 if (UNIX)
     set(RLIBRARYPATH     "lib/${ROOT_PROJECT}")
