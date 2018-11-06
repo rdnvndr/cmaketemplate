@@ -18,10 +18,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${BINARY_DIR}/${RLIBRARYPATH}")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${BINARY_DIR}/${RLIBRARYPATH}")
 
 # Сборка проекта
+include("${CMAKE_SOURCE_DIR}/cmake/rpath.cmake")
 add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES} ${FORMS} ${RESOURCES})
 target_include_directories(${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/../include
 )
+target_link_libraries(${PROJECT_NAME} ${LIBRARIES})
 
 # Установка проекта
 install (TARGETS ${PROJECT_NAME} DESTINATION ${RLIBRARYPATH})
