@@ -6,7 +6,7 @@ set(DESCRIPTION "Plugin")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-include(../plugins.cmake)
+include("${CMAKE_SOURCE_DIR}/cmake/plugins.cmake")
 
 
 

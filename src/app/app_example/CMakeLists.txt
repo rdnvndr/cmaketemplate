@@ -11,4 +11,4 @@ set(LIBRARIES
     thirdpartyexample
 )
 
-include(../app.cmake)
+include("${CMAKE_SOURCE_DIR}/cmake/app.cmake")

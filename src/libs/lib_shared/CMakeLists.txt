@@ -6,7 +6,7 @@ set(DESCRIPTION "Shared library")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-include(../libs.cmake)
+include("${CMAKE_SOURCE_DIR}/cmake/libs.cmake")
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE -DLIB_SHARED_LIBRARY)
 

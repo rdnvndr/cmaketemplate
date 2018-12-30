@@ -6,7 +6,7 @@ set(DESCRIPTION "Static library")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-include(../shared.cmake)
+include("${CMAKE_SOURCE_DIR}/cmake/shared.cmake")
 
 
 

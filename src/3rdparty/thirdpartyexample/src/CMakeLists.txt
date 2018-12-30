@@ -6,17 +6,9 @@ set(DESCRIPTION "Third Party")
 set(COMPANY     "RTPTechGroup")
 set(COPYRIGHT   "Copyright (C) RTPTechGroup")
 
-include(../../3rdparty.cmake)
+include("${CMAKE_SOURCE_DIR}/cmake/libs.cmake")
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE -DTHIRDPARTYEXAMPLE_LIBRARY)
 
 find_package(Qt5Core)
 target_link_libraries(${PROJECT_NAME} Qt5::Core)
-
-
-
-
-
-
-
-
