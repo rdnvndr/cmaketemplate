@@ -20,6 +20,8 @@ set(RINCPATH "include")
 set(DOCPATH  "share/doc/${CMAKE_PROJECT_NAME}")
 set(TESTPATH "bin")
 set(RPLUGINPATH "lib/${CMAKE_PROJECT_NAME}/plugins")
+add_definitions(-DPLUGIN_DIR="""../${RPLUGINPATH}""")
+
 if (UNIX)
     set(RLIBRARYPATH     "lib/${CMAKE_PROJECT_NAME}")
     set(RLIBRARYTESTPATH "lib/${CMAKE_PROJECT_NAME}")
