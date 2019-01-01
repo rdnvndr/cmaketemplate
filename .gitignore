@@ -32,13 +32,13 @@ qrc_*.cpp
 Thumbs.db
 .directory
 *.orig
-CMakeLists.txt.user
 
 # Version project
 version.h
 
 # qtcreator generated files
 *.pro.user*
+*.txt.user*
 *.qbs.user*
 *.qmlproject.user*
 *.pluginspec
