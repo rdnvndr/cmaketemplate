@@ -3,5 +3,6 @@ project(thirdpartyexample VERSION 1.1.1)
 
 add_subdirectory(src)
 
-enable_testing()
-add_subdirectory(tests)
+if ( ${CMAKE_TESTING_ENABLED} )
+    add_subdirectory(tests)
+endif()
