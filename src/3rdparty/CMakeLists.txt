@@ -1,3 +1,1 @@
-project(subprojects)
-
-add_subdirectory(thirdpartyexample)
+﻿project(subprojects)

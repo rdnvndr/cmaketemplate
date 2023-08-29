@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
+﻿cmake_minimum_required(VERSION 3.10)
 project(lib_shared VERSION 1.1.1)
 
 set(PRODUCTNAME "Shared library example")
 set(DESCRIPTION "Shared library")
-set(COMPANY     "RTPTechGroup")
-set(COPYRIGHT   "Copyright (C) RTPTechGroup")
+set(COMPANY     "Company")
+set(COPYRIGHT   "Copyright (C) Company")
 
 include("${CMAKE_SOURCE_DIR}/cmake/libs.cmake")
 

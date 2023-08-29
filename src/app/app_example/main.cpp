@@ -1,8 +1,7 @@
-#include <iostream>
+﻿#include <iostream>
 
 #include <lib_shared/lib_shared.h>
 #include <lib_static/lib_static.h>
-#include <thirdpartyexample/thirdpartyexample.h>
 #include "version.h"
 
 int main(int argc, char *argv[])
@@ -18,10 +17,6 @@ int main(int argc, char *argv[])
     LibStatic *libStatic = new LibStatic();
     libStatic->print();
     delete libStatic;
-
-    ThirdPartyExample *thirdParty = new ThirdPartyExample();
-    thirdParty->print();
-    delete thirdParty;
 
     return 0;
 }

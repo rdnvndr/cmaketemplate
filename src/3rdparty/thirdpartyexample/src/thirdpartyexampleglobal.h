@@ -1,7 +1,0 @@
-#include <QtCore/QtGlobal>
-
-#if defined(THIRDPARTYEXAMPLE_LIBRARY)
-#  define THIRDPARTYEXAMPLELIB Q_DECL_EXPORT
-#else
-#  define THIRDPARTYEXAMPLELIB Q_DECL_IMPORT
-#endif
